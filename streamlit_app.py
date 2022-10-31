@@ -13,4 +13,4 @@ my_fruit_list = pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/da
 my_fruit_list = my_fruit_list.set_index('Fruit')
 slt.dataframe(my_fruit_list)
 # Picking the set of fruits to make the smoothie
-slt.multiselect('Choose the fruits',list(my_fruit_list.index))
+slt.multiselect('Choose the fruits that you want to make the smoothie of ',list(my_fruit_list.index))
