@@ -19,7 +19,8 @@ slt.dataframe(fruits_to_show)
 # New section to display the response 
 slt.header("Fruityvice Fruit Advice!")
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-slt.text(fruityvice_response)
 slt.text(fruityvice_response.json())
+fruityvice_normalised = pd.json_normalize(fruityvice_response.json())
+slt.dataframe(fruityvice_normalised)
 
 
